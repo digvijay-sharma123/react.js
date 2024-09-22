@@ -9,8 +9,18 @@ function App() {
   // let cnt= 15;
   const addValue =()=>{
     if(cnt>=20) return cnt;
-    cnt+=1
-    setCnt(cnt)
+    // cnt+=1
+    // setCnt(cnt+1)
+    // setCnt(cnt+2)
+    // setCnt(cnt+1)
+    // setCnt(cnt+2)
+    // setCnt(cnt+1)
+
+    //#########
+    setCnt((prevcnt)=> prevcnt+1)
+    setCnt((prevcnt)=> prevcnt+1)
+    setCnt((prevcnt)=> prevcnt+2)
+    setCnt((prevcnt)=> prevcnt+1)
   }
   // Hook yaha padhe mainly ui rendering ke liye use krte
   const removeValue =()=>{
