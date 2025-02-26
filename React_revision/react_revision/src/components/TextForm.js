@@ -1,9 +1,11 @@
 import React,{useState} from 'react'
 export default function TextForm(props) {
     const [text,settext] = useState('')
+
     const onhandleupclick = ()=>{
         console.log("Upper Case Clicked")
-        settext("you have clicked on handleupclick")
+        let newtext = text.toUpperCase();
+        settext(newtext)
     }
     const onchanged = (event)=>{
         console.log("on change button clicked")
