@@ -23,10 +23,17 @@ function Navbar(props) {
             <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
             <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form> */}
-          <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
-            <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+          <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'} ms-auto`}>
+            <input
+              className="form-check-input"
+              onClick={props.toggleMode}
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckDefault"
+            />
             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
           </div>
+          
         </div>
       </nav>
     </div>

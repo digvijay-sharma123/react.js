@@ -4,17 +4,20 @@ export default function TextForm(props) {
     const [text, settext] = useState('')
     const [wordcount, setwordcount] = useState(0)
     const [charcount, setcharcount] = useState(0)
+    
 
     const onhandleupclick = () => {
         console.log("Upper Case Clicked")
         let newtext = text.toUpperCase();
         settext(newtext)
+        props.showAlert("Converted to Upper Case","Success")
     }
 
     const onhandlelowclick = () => {
         console.log("Lower Case Clicked")
         let newtext = text.toLowerCase();
         settext(newtext)
+        props.showAlert("Converted to Lower Case","Success");
     }
 
     const onchanged = (event) => {
@@ -44,6 +47,7 @@ export default function TextForm(props) {
         let text = document.getElementById("my-box")
         alert("Copied from Clipboard")
         navigator.clipboard.writeText(text.value)
+        props.showAlert("Copied","Success")
     }
 
     return (
